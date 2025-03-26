@@ -1,7 +1,7 @@
-const Page = () => {
-  return (
-    <div className=''>Page</div>
-  )
-}
+import AuthForm from '@/components/AuthForm';
 
-export default Page
+const Page = () => {
+  return <AuthForm type="sign-up" />
+};
+
+export default Page;
