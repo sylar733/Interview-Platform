@@ -2,9 +2,9 @@ import { getInterviewById } from '@/lib/actions/general.action';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import { getRandomInterviewCover } from '@/lib/utils';
+import DisplayTechIcons from '@/components/DisplayTechIcon';
 import Agent from '@/components/Agent';
 import { getCurrentUser } from '@/lib/actions/auth.action';
-import DisplayTechIcon from '@/components/DisplayTechIcon';
 
 const Page = async ({ params }: RouteParams) => {
   const { id } = await params;
@@ -28,7 +28,7 @@ const Page = async ({ params }: RouteParams) => {
             <h3 className="capitalize">{interview.role} Interview</h3>
           </div>
 
-          <DisplayTechIcon techStack={interview.techstack} />
+          <DisplayTechIcons techStack={interview.techstack} />
         </div>
 
         <p className="bg-dark-200 px-4 py-2 rounded-lg h-fit capitalize">{interview.type}</p>
